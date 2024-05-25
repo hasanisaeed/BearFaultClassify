@@ -30,18 +30,30 @@
 
 ## Downsampling (Yes)
 ### #1 Architecture
-`Conv1D(128) => Conv1D(128) => Conv1D(128) => Conv1D(64)`
+
+```python
+Conv1D(128) => Conv1D(128) => Conv1D(128) => Conv1D(64)
+```
 
 ### #2 Architecture
-`Conv1D(128) => Conv1D(256) => Conv1D(256) => Conv1D(64)`
+
+```python
+Conv1D(128) => Conv1D(256) => Conv1D(256) => Conv1D(64)
+```
 
 ### #3 Architecture
-`Conv1D(64) => Conv1D(128) => Conv1D(256) => Conv1D(64)`
+
+```python
+Conv1D(64) => Conv1D(128) => Conv1D(256) => Conv1D(64)
+```
 
 ## Downsampling (No)
 
 ### #4 Architecture
-`Conv1D(128) => Conv1D(128) => Conv1D(128) => Conv1D(64)`
+
+```python
+Conv1D(128) => Conv1D(128) => Conv1D(128) => Conv1D(64)
+```
 
 <p>
     <img src="images/run-01.png" alt="run-01">
@@ -49,8 +61,11 @@
 </p>
 
 ### #5 Architecture
-`Conv1D(64) => Conv1D(64) => Conv1D(64) => Conv1D(128) => Conv1D(64)`
- 
+
+```python
+Conv1D(64) => Conv1D(64) => Conv1D(64) => Conv1D(128) => Conv1D(64)`
+ ```
+
 <p>
     <img src="images/run-02.png" alt="run-02">
     <em>#5 Architecture Results</em>
