@@ -90,21 +90,26 @@ These architectures retain the full sequence length, designed for more detailed 
     ```python
     Conv1D(128) => Conv1D(128) => Conv1D(128) => Conv1D(64)
     ```
-  
-    <p align="center">
-        <img src="images/run-01.png" alt="Run 01 Results">
-        <em>Figure 1: Results for Architecture #4</em>
-    </p>
+
+
+<div align="center">
+    <img src="images/run-01.png" alt="Run 01 Results">
+    <span>Figure 1: Results for Architecture #4</span>
+</div>
+    
+---
 
 - **#5 Architecture**: A deeper configuration with an initial smaller filter size, followed by an increase, allowing the model to learn a hierarchical representation of features.
     ```python
     Conv1D(64) => Conv1D(64) => Conv1D(64) => Conv1D(128) => Conv1D(64)
     ```
+
   
-    <p align="center">
-        <img src="images/run-02.png" alt="Run 02 Results">
-        <em>Figure 2: Results for Architecture #5</em>
-    </p>
+<div align="left">
+    <img src="images/run-02.png" alt="Run 02 Results">
+    <span>Figure 2: Results for Architecture #5</span>
+</div>
+
 
 ---
 
