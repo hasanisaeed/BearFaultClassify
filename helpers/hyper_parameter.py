@@ -5,9 +5,9 @@ from keras.layers import Conv1D, BatchNormalization, GlobalAveragePooling1D, Per
 from keras.layers import Input, Dense, LSTM, CuDNNLSTM, concatenate, Activation, GRU, SimpleRNN
 from keras.models import Model
 
-from util.constants import MAX_SEQUENCE_LENGTH_LIST, NB_CLASSES_LIST
-from util.keras_utils import train_model, evaluate_model, loss_model
-from util.layer_utils import AttentionLSTM
+from ..utils.constants import MAX_SEQUENCE_LENGTH_LIST, NB_CLASSES_LIST
+from ..utils.keras_utils import train_model, evaluate_model, loss_model
+from ..utils.layer_utils import AttentionLSTM
 
 
 def generate_lstmfcn(MAX_SEQUENCE_LENGTH, NB_CLASS, NUM_CELLS=8):

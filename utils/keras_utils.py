@@ -16,8 +16,8 @@ from matplotlib.ticker import FuncFormatter
 from skimage.transform import resize
 from sklearn.preprocessing import LabelEncoder
 
-from util.constants import MAX_SEQUENCE_LENGTH_LIST
-from util.generic_utils import load_dataset_at, calculate_dataset_metrics, cutoff_choice, \
+from utils.constants import MAX_SEQUENCE_LENGTH_LIST
+from utils.generic_utils import load_dataset_at, calculate_dataset_metrics, cutoff_choice, \
     cutoff_sequence, plot_dataset
 
 mpl.style.use('seaborn-paper')

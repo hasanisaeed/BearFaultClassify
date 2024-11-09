@@ -5,7 +5,7 @@ import pandas as pd
 
 mpl.style.use('seaborn-paper')
 
-from util.constants import MAX_SEQUENCE_LENGTH_LIST, NB_CLASSES_LIST
+from utils.constants import MAX_SEQUENCE_LENGTH_LIST, NB_CLASSES_LIST
 
 
 def load_dataset_at(index, normalize_timeseries=False, verbose=True) -> (np.array, np.array):

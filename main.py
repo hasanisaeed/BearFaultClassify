@@ -12,10 +12,10 @@ from keras.regularizers import l2
 from scipy import interp
 from sklearn.metrics import roc_curve, auc, classification_report
 from keras.layers import GRU
-from util.constants import MAX_SEQUENCE_LENGTH_LIST, NB_CLASSES_LIST
-from util.generic_utils import load_dataset_at
-from util.keras_utils import evaluate_model, train_model
-from util.layer_utils import AttentionLSTM
+from utils.constants import MAX_SEQUENCE_LENGTH_LIST, NB_CLASSES_LIST
+from utils.generic_utils import load_dataset_at
+from utils.keras_utils import evaluate_model, train_model
+from utils.layer_utils import AttentionLSTM
 
 m_layers = [
     'attention_lstm_1',

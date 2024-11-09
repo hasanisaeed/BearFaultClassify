@@ -1,6 +1,9 @@
 ## Deep Learning
 >Bearing Fault Detection and Classification Based on Temporal Convolutions and LSTM Network in Induction Machine Systems.
 
+## Requirements
+- Python 3.7
+
 ## GRU Results
 |Downsampling|Sequence Length|Train (Samples)|Test (Samples)|Classes|
 |:---:|:---:|:---:|:---:|:---:|
