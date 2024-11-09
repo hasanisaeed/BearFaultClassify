@@ -55,45 +55,58 @@ The following table shows the performance of GRU-based models across various con
 | 15 | 1050 | - | [#5](#5-architecture) | - | No | 92.43% |
 
 ---
+## Model Architectures
 
-### #1 Architecture
+This section details the model architectures used for bearing fault detection, optimized with different downsampling strategies to enhance efficiency and accuracy. Each architecture utilizes 1D convolutional layers with varying configurations.
 
-```python
-Conv1D(128) => Conv1D(128) => Conv1D(128) => Conv1D(64)
-```
+---
 
-### #2 Architecture
+### Architectures with Downsampling (Yes)
 
-```python
-Conv1D(128) => Conv1D(256) => Conv1D(256) => Conv1D(64)
-```
+These architectures employ downsampling to reduce sequence length, facilitating faster training while retaining essential temporal features.
 
-### #3 Architecture
+- **#1 Architecture**: A four-layer convolutional model that maintains consistent dimensionality across the first three layers, with a reduction in the final layer.
+    ```python
+    Conv1D(128) => Conv1D(128) => Conv1D(128) => Conv1D(64)
+    ```
 
-```python
-Conv1D(64) => Conv1D(128) => Conv1D(256) => Conv1D(64)
-```
+- **#2 Architecture**: An enhanced version of #1 with increased dimensionality in the middle layers for improved feature extraction.
+    ```python
+    Conv1D(128) => Conv1D(256) => Conv1D(256) => Conv1D(64)
+    ```
 
-## Downsampling (No)
+- **#3 Architecture**: This configuration introduces a more gradual increase in filter sizes, potentially capturing finer-grained features before reduction.
+    ```python
+    Conv1D(64) => Conv1D(128) => Conv1D(256) => Conv1D(64)
+    ```
 
-### #4 Architecture
+---
 
-```python
-Conv1D(128) => Conv1D(128) => Conv1D(128) => Conv1D(64)
-```
+### Architectures without Downsampling (No)
 
-<p>
-    <img src="images/run-01.png" alt="run-01">
-    <em>#4 Architecture Results</em>
-</p>
+These architectures retain the full sequence length, designed for more detailed temporal feature extraction without losing data granularity.
 
-### #5 Architecture
+- **#4 Architecture**: A stable model with identical filter sizes in the first three layers, enabling consistent feature maps, followed by a final reduction layer.
+    ```python
+    Conv1D(128) => Conv1D(128) => Conv1D(128) => Conv1D(64)
+    ```
+  
+    <p align="center">
+        <img src="images/run-01.png" alt="Run 01 Results">
+        <em>Figure 1: Results for Architecture #4</em>
+    </p>
 
-```python
-Conv1D(64) => Conv1D(64) => Conv1D(64) => Conv1D(128) => Conv1D(64)`
- ```
+- **#5 Architecture**: A deeper configuration with an initial smaller filter size, followed by an increase, allowing the model to learn a hierarchical representation of features.
+    ```python
+    Conv1D(64) => Conv1D(64) => Conv1D(64) => Conv1D(128) => Conv1D(64)
+    ```
+  
+    <p align="center">
+        <img src="images/run-02.png" alt="Run 02 Results">
+        <em>Figure 2: Results for Architecture #5</em>
+    </p>
 
-<p>
-    <img src="images/run-02.png" alt="run-02">
-    <em>#5 Architecture Results</em>
-</p>
+---
+
+Each architecture has been tested with specific training conditions to measure its accuracy and performance, providing insights into the effectiveness of downsampling for fault detection in induction machine systems.
+
