@@ -5,13 +5,16 @@ This project applies deep learning to detect and classify faults in bearings of 
 
 ---
 
-## Related Publication
-For further reading and in-depth research details, refer to our published paper:
+## 📄 Publication Reference
 
-**Title**: Classification of Fault Severity in Induction Machine Systems Based on Temporal Convolutions and Recurrent Networks  
+For a comprehensive exploration of our methodology and findings, consult our published paper:
+
+**Title**: *Classification of Fault Severity in Induction Machine Systems Using Temporal Convolutions and Recurrent Networks*  
 **Authors**: V. Mashayekhi, S. Hasani Borzadaran, M. Hoseintabar Marzebali  
-**Published**: 16 February 2022  
-**DOI**: [https://doi.org/10.1155/2022/4224356](https://doi.org/10.1155/2022/4224356)
+**Published**: February 16, 2022  
+**Access**: [DOI](https://doi.org/10.1155/2022/4224356)
+
+This paper outlines the advanced deep learning techniques developed to detect and classify fault severity in induction machine systems.
 
 ---
 
